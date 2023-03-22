@@ -1,0 +1,7 @@
+body > button {
+    padding: 10px 15px;
+    background-color: aqua;
+    color: black;
+    border: none;
+    border-radius: 7px;
+}
