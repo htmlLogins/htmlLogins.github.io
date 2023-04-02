@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css2?family=Source%20Sans%20Pro:wght@400;700&display=swap);
 header {
     background-color: aqua;
     position: fixed;
@@ -26,18 +27,20 @@ li:hover {
 
 a {
     text-decoration: none;
-    color:black;
     transition: color 0.3s;
 }
 
 a:hover{
-    color:white;
+    color: yellow
 }
 main {
     margin-top: 80px;
 }
 
 .cube {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 300px;
     height: 300px;
     background-color: white;
@@ -49,10 +52,10 @@ main {
     width: 100px;
     height: 100px;
     background-color: black;
-    position: absolute;
     top: 5px;
     right: 5px;
     border-radius: 5px;
+    animation: rotate-animation 2s linear infinite;
 }
 
 .burger {
@@ -85,6 +88,7 @@ main {
 
     li {
         padding-bottom: 20px;
+        color: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);;
     }
 
     .check {
@@ -102,3 +106,33 @@ main {
     transform: translateX(0px);
 }
 }
+.rainbow-background {
+    background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+    background-size: 200% 200%;
+    animation: rainbow-background-animation 10s ease infinite;
+  }
+  
+  @keyframes rainbow-background-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+}
+.box1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+a{
+    font-size: 20px;
+}
+@keyframes rotate-animation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(180deg);
+    }
+  }
