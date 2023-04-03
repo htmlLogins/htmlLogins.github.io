@@ -1,0 +1,137 @@
+header {
+    background-color: aqua;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 2;
+    border-style: solid;
+    border-color: black;
+    border-radius: 50px;
+}
+
+ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+li {
+    list-style: none;
+    transition: transform 0.3s;
+}
+
+li:hover {
+    transform: translateX(5px);
+}
+
+a {
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover{
+    color: yellow
+}
+main {
+    margin-top: 80px;
+}
+
+.cube {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 300px;
+    background-color: white;
+    position: relative;
+    border-radius: 5px;
+}
+
+.inner-cube {
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    top: 5px;
+    right: 5px;
+    border-radius: 5px;
+    animation: rotate-animation 2s linear infinite;
+}
+
+.burger {
+    display: none;
+}
+.check {
+    display: none;
+}
+
+@media (max-width: 200px) {
+    .burger {
+        display: block;
+    }
+
+    ul {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        flex-direction: column;
+        background-color: aqua;
+        width: 100vw;
+        margin: 0;
+        padding-left: 0;
+        align-items: center;
+        display: flex;
+        transform:translateX(300px);
+        transition: transform 0.4s;
+        border-radius: 5px;
+    }
+
+    li {
+        padding-bottom: 20px;
+        color: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);;
+    }
+
+    .check {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 40px;
+        height: 40px;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+.check:checked + ul {
+    transform: translateX(0px);
+}
+}
+.rainbow-background {
+    background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+    background-size: 200% 200%;
+    animation: rainbow-background-animation 10s ease infinite;
+  }
+  
+  @keyframes rainbow-background-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+}
+.box1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+a{
+    font-size: 20px;
+}
+@keyframes rotate-animation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(180deg);
+    }
+}
