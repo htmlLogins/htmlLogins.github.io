@@ -49,6 +49,7 @@ header {
     background-color: white;
     position: relative;
     border-radius: 5px;
+    border: 2px solid black;
    }
    
    .inner-cube {
@@ -146,4 +147,21 @@ header {
 }
 .teksts{
     font-size: 18px;
+}
+.bilde1{
+    height: 300px;
+    width: 300px;
+    float: right;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+.bilde2{
+    height: 300px;
+    width: 300px;
+    float: left;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+.h2o{
+    text-align: center;
 }
